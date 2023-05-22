@@ -1,0 +1,13 @@
+sort1 uses: Bubble Sort
+
+How do you know?: The best case runtime of bubble sort is sigma(n), so sorting data already in order will be faster than Selection Sort, but slower than Merge sort.
+After looking at the real time to sort sorted10000.txt and sorted50000.txt, sort1 was faster than sort3, but slower than sort2.
+
+sort2 uses: Merge Sort
+
+How do you know?: Compared to the other sorting algorithms, sort2 was significantly faster regardless of data size and order of the data.
+
+sort3 uses: Selection Sort
+
+How do you know?: Selection sort has a best-case run time of sigma(n^2), which is slower than bubble sort ( sigma(n) ) and merge sort ( O(nlogn) ).
+The run time for sorted10000.txt and sorted50000.txt proved sort3 was slower than sort1 and sort2.
