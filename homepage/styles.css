@@ -1,0 +1,77 @@
+.link
+{
+    font-size: 20px;
+    color: darkslategray;
+}
+
+.media-text
+{
+    font-size: 35px;
+    color: gold;
+}
+
+.btn-caption
+{
+    font-size: 10px;
+    color: gold;
+}
+
+.pad-navbar
+{
+    margin-bottom: 100px;
+}
+
+.pad-main
+{
+    margin-bottom: 30px;
+}
+
+.index-color
+{
+    background-color: #c5b3e6;
+}
+
+.media-color
+{
+    background-color: black;
+}
+
+.aboutme-color
+{
+    background-color: #75b798;
+}
+
+.hobby-color
+{
+    background-color: #fcd2ed
+}
+ul.aboutme
+{
+    list-style-type: circle;
+    background: #005377;
+    padding: 15px;
+    margin: auto;
+    width: 800px;
+}
+
+li.aboutme
+{
+    margin: 20px;
+    font-size: 25px;
+    color: white;
+}
+
+.hobby-img
+{
+    height: 250px;
+    width: 250px;
+}
+.centered
+{
+    text-align: center;
+}
+
+header
+{
+    text-align: center;
+}
