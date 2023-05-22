@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+    
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // Add code to check answers to questions
+            document.addEventListener("DOMContentLoaded", function()
+            {
+                // PART ONE
+                // Correct button
+                let correct = document.querySelector("#t");
+                correct.addEventListener("click", function()
+                {
+                    correct.style.backgroundColor = "green";
+                    document.querySelector("#response1").innerHTML = "Correct!"
+                });
+
+                // Incorrect Buttons
+                let incorrect = document.querySelectorAll(".f");
+                for (let i = 0; i < incorrect.length; i++)
+                {
+                    incorrect[i].addEventListener("click", function()
+                    {
+                        incorrect[i].style.backgroundColor = "red";
+                        document.querySelector("#response1").innerHTML = "Incorrect!"
+                    });
+                }
+
+                //PART TWO
+                let check_Ans = document.querySelector("#answer");
+                check_Ans.addEventListener("click", function()
+                {
+                    // Correct input
+                    let input = document.querySelector("input");
+                    if (input.value.toLowerCase() === "cs50")
+                    {
+                        input.style.backgroundColor = "green";
+                        document.querySelector("#response2").innerHTML = "Correct!"
+                    }
+                    // Incorrect Input
+                    else
+                    {
+                        input.style.backgroundColor = "red";
+                        document.querySelector("#response2").innerHTML = "Incorrect!"
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- Add multiple choice question here -->
+                <h3>What is the square root of 25?</h3>
+                <button class = "f">9</button>
+                <button class = "f">4</button>
+                <button id = "t">5</button>
+                <button class = "f">8</button>
+                <p id="response1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- Add free response question here -->
+                <h3>What class is this problem for?</h3>
+                <input type="text"></input>
+                <button id="answer">Check</button>
+                <p id="response2"></p>
+            </div>
+        </div>
+    </body>
+</html>
