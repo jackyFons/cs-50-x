@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <h3>Stock Purchases</h3>
+    <p><span class = "bigger">Cash Balance:</span> {{balance | usd }} &nbsp; &nbsp; <span class = "bigger">Grand Total:</span> {{total | usd}} </p>
+    <table class = "table">
+        <thead>
+            <th>Stock</th>
+            <th>Symbol</th>
+            <th>Shares Owned</th>
+            <th>Stock Price</th>
+            <th>Total Price</th>
+        </thead>
+        <tbody>
+            {% for purchase in purchases %}
+                <tr>
+                    <td>{{purchase.name}}</td>
+                    <td>{{purchase.symbol}}</td>
+                    <td>{{purchase.shares}}</td>
+                    <td>{{purchase.current_price | usd}}</td>
+                    <td>{{purchase.total | usd}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

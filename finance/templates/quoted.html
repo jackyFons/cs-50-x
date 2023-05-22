@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+    <h3>Quote</h3>
+    <table class = "table table-sm table-bordered">
+        <thead>
+           <th class = "table-primary">Name</th>
+           <th class = "table-primary">Symbol</th>
+           <th class = "table-primary">Price</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{quote.name}}</td>
+                <td>{{quote.symbol}}</td>
+                <td>{{quote.price | usd}}</td>
+            <tr>
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <h3>Transaction History</h3>
+    <table class = "table">
+        <thead>
+            <th>Transaction Type</th>
+            <th>Date and Time<br><small>YYYY-MM-DD HH:MM:SS</small></th>
+            <th>Stock Name</th>
+            <th>Symbol</th>
+            <th>Number of Shares</th>
+            <th>Price Per Share</th>
+            <th>Transaction Total</th>
+        </thead>
+        <tbody>
+            {% for purchase in purchases %}
+                <tr>
+                    <td>{{purchase.type}}</td>
+                    <td>{{purchase.date_time}}</td>
+                    <td>{{purchase.name}}</td>
+                    <td>{{purchase.symbol}}</td>
+                    <td>{{purchase.num_shares}}</td>
+                    <td>{{purchase.price_per_share | usd}}</td>
+                    <td>{{purchase.total_price | usd}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
